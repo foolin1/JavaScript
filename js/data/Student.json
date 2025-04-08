@@ -1,0 +1,31 @@
+{
+	"fields": {
+		"id": {
+			"defaultValue": 0,
+			"notNull": true,
+			"primaryKey": true,
+			"type": "NumberType"
+		},
+		"name": {
+			"maxLength": 256,
+			"defaultValue": "NoName",
+			"canBeEmpty": true,
+			"notNull": true,
+			"type": "StringType"
+		},
+		"groupId": {
+			"onDelete": "Cascade",
+			"otherTable": "Group",
+			"fieldName": "id",
+			"type": "ForeignKeyType"
+		}
+	},
+	"data": [
+		{
+			"id": 1,
+			"name": "NoName",
+			"groupId": 1
+		}
+	],
+	"references": []
+}
